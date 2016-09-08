@@ -1,0 +1,25 @@
+{
+  "name": "angular-request",
+  "description": "A lightweight css framework",
+  "version": "0.0.0",
+  "homepage": "https://github.com/leadi/izanagi",
+  "authors": [
+    "leadi <system@leadi.co.jp>"
+  ],
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "css",
+    "sass",
+    "lightweight",
+    "framework"
+  ],
+  "dependencies": {}
+}
