@@ -1,6 +1,10 @@
 .izanagi {
-// ## Video
-// * video
-// 	* vimeo
-// 	* youtube
+	.video {
+		&.vimeo {
+
+		}
+		&.youtube {
+
+		}
+	}
 }

@@ -1,11 +1,68 @@
 .izanagi {
-// ## Form
-// * form (input [search, text password email number tel, checkbox, radio], select)
-// 	* form-default
-// 	* form-simple
-// 	* form-disable
+	.form {
+		&.form-default {
+			input[type=text],
+			input[type=password],
+			input[type=email],
+			input[type=number],
+			input[type=tel] {
 
-// * input
-// 	* input-icon-left
-// 	* input-icon-right
+			}
+			input[type=search] {
+
+			}
+			input[type=checkbox] {
+
+			}
+			input[type=radio] {
+
+			}
+			label.select {
+				i.select {
+
+				}
+				select {
+
+				}
+			}
+			.input-icon-left {
+
+			}
+			.input-icon-right {
+
+			}
+		}
+		&.form-default {
+			input[type=text],
+			input[type=password],
+			input[type=email],
+			input[type=number],
+			input[type=tel] {
+
+			}
+			input[type=search] {
+
+			}
+			input[type=checkbox] {
+
+			}
+			input[type=radio] {
+
+			}
+			label.select {
+				i.select {
+
+				}
+				select {
+
+				}
+			}
+			.input-icon-left {
+
+			}
+			.input-icon-right {
+
+			}
+		}
+	}
 }

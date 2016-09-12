@@ -1,9 +1,51 @@
 .izanagi {
-// ## Grid (Flex)
-// * row
-// 	* columns
-// 		* one ~ twelve
-// 			* columns-space-large
-// 			* columns-space-medium
-// 			* columns-space-small
+	.row {
+		> .columns {
+			&.one {
+
+			}
+			&.two {
+
+			}
+			&.three {
+
+			}
+			&.four {
+
+			}
+			&.five {
+
+			}
+			&.six {
+
+			}
+			&.seven {
+
+			}
+			&.eight {
+
+			}
+			&.nine {
+
+			}
+			&.ten {
+
+			}
+			&.eleven {
+
+			}
+			&.twelve {
+
+			}
+			&.columns-space-large {
+
+			}
+			&.columns-space-medium {
+
+			}
+			&.columns-space-small {
+
+			}
+		}
+	}
 }

@@ -1,0 +1,29 @@
+.izanagi .text-center {
+  text-align: center; }
+
+.izanagi .text-left {
+  text-align: left; }
+
+.izanagi .text-right {
+  text-align: right; }
+
+.izanagi {
+  padding: 0;
+  margin: 0; }
+
+.izanagi img {
+  width: 100%;
+  vertical-align: top;
+  line-height: 0; }
+
+.izanagi {
+  color: #444;
+  font-family: sans-serif, Roboto, "Helvetica Neue";
+  font-size: 13px;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }

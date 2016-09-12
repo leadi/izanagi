@@ -1,9 +1,20 @@
 .izanagi {
-// ## class
-// * notice (Paragraph, Input)
-// * require (Paragraph, Input)
-// * optional (Paragraph, Input)
-// * text-center
-// * text-left
-// * text-right
+	.notice {
+
+	}
+	.require {
+
+	}
+	.optional {
+
+	}
+	.text-center {
+		text-align: center;
+	}
+	.text-left {
+		text-align: left;
+	}
+	.text-right {
+		text-align: right;
+	}
 }

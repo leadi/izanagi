@@ -1,10 +1,23 @@
 .izanagi {
-// ## dialog
-// * dialog
-// 	* dialog-header
-// 	* dialog-content
-// 	* dialog-footer
-// 		* dialog-height-high
-// 		* dialog-height-normal
-// 		* dialog-height-low
+	.dialog {
+		&.dialog-height-high {
+
+		}
+		&.dialog-height-normal {
+
+		}
+		&.dialog-height-low {
+
+		}
+		> .dialog-header {
+
+		}
+		> .dialog-content {
+
+		}
+		> .dialog-footer {
+
+		}
+
+	}
 }

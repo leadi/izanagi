@@ -1,8 +1,16 @@
 .izanagi {
-// ## Navigation-drawer
-// * navigation-drawer
-// 	* navigation-drawer-left
-// 	* navigation-drawer-right
-// 	* navigation-drawer-top
-// 	* navigation-drawer-bottom
+	.navigation-drawer {
+		&.navigation-drawer-top {
+
+		}
+		&.navigation-drawer-bottom {
+
+		}
+		&.navigation-drawer-left {
+
+		}
+		&.navigation-drawer-right {
+
+		}
+	}
 }
