@@ -1,15 +1,37 @@
 .izanagi {
-// ## Button
-// * btn
-// 	* btn-primary
-// 	* btn-secondary
-// 	* btn-default
-// 	* btn-danger
-// 	* btn-warning
-// 	* btn-sns
-// 		* btn-large
-// 		* btn-medium
-// 		* btn-small
-// 			* btn-disable (ng-disable がある)
-// 				* btn-block
+	.btn {
+		&.btn-primary {
+
+		}
+		&.btn-secondary {
+
+		}
+		&.btn-default {
+
+		}
+		&.btn-danger {
+
+		}
+		&.btn-warning {
+
+		}
+		&.btn-sns {
+
+		}
+		&.btn-large {
+
+		}
+		&.btn-medium {
+
+		}
+		&.btn-small {
+
+		}
+		&.btn-disable {
+
+		}
+		&.btn-block {
+
+		}
+	}
 }

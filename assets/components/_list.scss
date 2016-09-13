@@ -1,7 +1,13 @@
 .izanagi {
-// ## List
-// * list
-// 	* list-default
-// 	* list-tile
-// 	* list-collection
+	.list {
+		&.list-default {
+
+		}
+		&.list-tile {
+
+		}
+		&.list-collection {
+
+		}
+	}
 }

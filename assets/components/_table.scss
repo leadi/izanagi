@@ -1,6 +1,10 @@
 .izanagi {
-// ## Table
-// * table
-// 	* table-default
-// 	* table-simple
+	.table {
+		&.table-default {
+
+		}
+		&.table-simple {
+
+		}
+	}
 }
