@@ -5,10 +5,28 @@ $grid-culumn-gutter: 16px;
 $viewportsizelist: -mobile, -tablet, -desktop;
 
 .row {
+	display: block;
+	flex-wrap: nowrap;
 	@include mobile {
 		&.on-mobile {
 			display: flex;
 			flex-wrap: wrap;
+			@include mobile {
+				@for $i from 1 through $grid-column-count {
+					> .col-#{$i} {
+						flex: 0 0 auto;
+						display: block;
+						width: ($i/$grid-column-count) * 100%;
+					}
+				}
+				@for $i from 1 through $grid-column-offset-count {
+					> .col-offset-#{$i} {
+						flex: 0 0 auto;
+						display: block;
+						margin-left: ($i/$grid-column-count) * 100%!important;
+					}
+				}
+			}
 		}
 	}
 	@include tablet {
@@ -28,18 +46,22 @@ $viewportsizelist: -mobile, -tablet, -desktop;
 		}
 	}
 	margin-top: $grid-culumn-gutter * -1;
-	margin-left: $grid-culumn-gutter * -1;
+	margin-left: ($grid-culumn-gutter/2) * -1;
+	margin-right: ($grid-culumn-gutter/2) * -1;
 	[class^="col"],
 	[class*=" col"] {
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: 0%;
 		display: block;
-		padding: $grid-culumn-gutter 0 0 $grid-culumn-gutter;
+		padding-top: $grid-culumn-gutter;
+		padding-right: ($grid-culumn-gutter/2);
+		padding-left: ($grid-culumn-gutter/2);
 	}
 	&.row-gapless {
 		margin-top: 0;
 		margin-left: 0;
+		margin-right: 0;
 		[class^="col"],
 		[class*=" col"] {
 			padding: 0;
@@ -62,7 +84,7 @@ $viewportsizelist: -mobile, -tablet, -desktop;
 			> .col-mobile-offset-#{$i} {
 				flex: 0 0 auto;
 				display: block;
-				margin-left: ($i/$grid-column-count) * 100%;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
 		}
 	}
@@ -82,7 +104,7 @@ $viewportsizelist: -mobile, -tablet, -desktop;
 			> .col-tablet-offset-#{$i} {
 				flex: 0 0 auto;
 				display: block;
-				margin-left: ($i/$grid-column-count) * 100%;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
 		}
 	}
@@ -100,7 +122,7 @@ $viewportsizelist: -mobile, -tablet, -desktop;
 			> .col-desktop-offset-#{$i} {
 				flex: 0 0 auto;
 				display: block;
-				margin-left: ($i/$grid-column-count) * 100%;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
 		}
 	}
