@@ -1,0 +1,24 @@
+hr {
+  background-color: #dbdbdb;
+  border: none;
+  display: block;
+  height: 1px;
+  margin: 1.5rem 0;
+}
+
+pre {
+  background-color: whitesmoke;
+  color: #4a4a4a;
+  font-size: 0.8em;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  display: block;
+  font-size: 1em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+}
