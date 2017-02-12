@@ -1,50 +1,127 @@
-.izanagi {
-	.row {
-		> .columns {
-			&.one {
+// grid
+$grid-column-count: 12;
+$grid-column-offset-count: $grid-column-count - 1;
+$grid-culumn-gutter: 16px;
 
+.row {
+	display: block;
+	flex-wrap: nowrap;
+	@include mobile {
+		&.on-mobile {
+			display: flex;
+			flex-wrap: wrap;
+			@include mobile {
+				@for $i from 1 through $grid-column-count {
+					> .col-#{$i} {
+						flex: 0 0 auto;
+						display: block;
+						width: ($i/$grid-column-count) * 100%;
+					}
+				}
+				@for $i from 1 through $grid-column-offset-count {
+					> .col-offset-#{$i} {
+						flex: 0 0 auto;
+						display: block;
+						margin-left: ($i/$grid-column-count) * 100%!important;
+					}
+				}
 			}
-			&.two {
+		}
+	}
+	@include tablet {
+		&.on-tablet {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&:not(.is-desktop) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	@include desktop {
+		&.on-desktop {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	margin-top: $grid-culumn-gutter * -1;
+	margin-left: ($grid-culumn-gutter/2) * -1;
+	margin-right: ($grid-culumn-gutter/2) * -1;
+	[class^="col"],
+	[class*=" col"] {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 0%;
+		display: block;
+		padding-top: $grid-culumn-gutter;
+		padding-right: ($grid-culumn-gutter/2);
+		padding-left: ($grid-culumn-gutter/2);
+	}
+	&.row-gapless {
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+		[class^="col"],
+		[class*=" col"] {
+			padding: 0;
+		}
+	}
+	&.row-direction-column {
+		flex-direction: column;
+	}
 
+	// applies: until tablet
+	@include mobile {
+		@for $i from 1 through $grid-column-count {
+			> .col-mobile-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				width: ($i/$grid-column-count) * 100%;
 			}
-			&.three {
-
+		}
+		@for $i from 1 through $grid-column-offset-count {
+			> .col-mobile-offset-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
-			&.four {
+		}
+	}
 
+	// applies: from tablet
+	@include tablet {
+		@for $i from 1 through $grid-column-count {
+			> .col-#{$i},
+			> .col-tablet-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				width: ($i/$grid-column-count) * 100%;
 			}
-			&.five {
-
+		}
+		@for $i from 1 through $grid-column-offset-count {
+			> .col-offset-#{$i},
+			> .col-tablet-offset-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
-			&.six {
+		}
+	}
 
+	// applies: from desktop
+	@include desktop {
+		@for $i from 1 through $grid-column-count {
+			> .col-desktop-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				width: ($i/$grid-column-count) * 100%;
 			}
-			&.seven {
-
-			}
-			&.eight {
-
-			}
-			&.nine {
-
-			}
-			&.ten {
-
-			}
-			&.eleven {
-
-			}
-			&.twelve {
-
-			}
-			&.columns-space-large {
-
-			}
-			&.columns-space-medium {
-
-			}
-			&.columns-space-small {
-
+		}
+		@for $i from 1 through $grid-column-offset-count {
+			> .col-desktop-offset-#{$i} {
+				flex: 0 0 auto;
+				display: block;
+				margin-left: ($i/$grid-column-count) * 100%!important;
 			}
 		}
 	}

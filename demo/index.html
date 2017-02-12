@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style-docs.css">
+</head>
+<body style="max-width: 960px; margin: 0 auto; min-height: 100vh; padding: 0 16px;">
+	<h1>Documentation</h1>
+	<h2>Grid system</h2>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>Columns</h3>
+		<div>
+			<p>
+				To build a <strong>grid</strong>, just
+			</p>
+			<ol>
+				<li>Add a <code>row</code> container</li>
+				<li>Adds as many <code>col</code> elements as you want</li>
+			</ol>
+			<p>
+				Each column will have an equal width, no matter the number of columns.
+			</p>
+		</div>
+		<div class="row " style="margin-top: 24px;">
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #ddd"><code>Fisrt column</code></p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #ccc"><code>Second column</code></p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #666"><code>Third column</code></p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>Forth column</code></p>
+			</div>
+		</div>
+		<figure class="highlight">
+			<pre>
+				<code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+					First column
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					Second column
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					Third column
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					Fourth column
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+				</code>
+			</pre>
+		</figure>
+	</section>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>Responsiveness</h3>
+		<div>
+			<p>
+				By default, columns are only activated from tablet onwards. This means columns are stacked on top of each other on mobile.
+			</p>
+			<p>
+				If you want columns to work on <strong>mobile too</strong>, just add the <code>on-mobile</code> modifier on the <code>row</code> container:
+			</p>
+		</div>
+		<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #ddd">1</p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #ccc">2</p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #666">3</p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #999">4</p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #777">5</p>
+			</div>
+			<div class="col">
+				<p style="text-align: center; padding:24px 0; background-color: #444">6</p>
+			</div>
+		</div>
+		<figure class="highlight">
+			<pre>
+				<code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"rom on-mobile"</span><span class="nt">&gt;</span>
+					1
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					2
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					3
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					4
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					5
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col"</span><span class="nt">&gt;</span>
+					6
+					<span class="nt">&lt;/div&gt;</span>
+					<span class="nt">&lt;/div&gt;</span>
+				</code>
+			</pre>
+		</figure>
+	</section>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>gapless</h3>
+		<div class="row row-gapless" style="margin-top: 24px;">
+			<div class="col-2">
+				<p style="text-align: center; padding:24px 0; background-color: #ddd"><code>col</code></p>
+			</div>
+			<div class="col-3">
+				<p style="text-align: center; padding:24px 0; background-color: #ccc"><code>col</code></p>
+			</div>
+			<div class="col-1">
+				<p style="text-align: center; padding:24px 0; background-color: #666"><code>col</code></p>
+			</div>
+			<div class="col-2">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col</code></p>
+			</div>
+			<div class="col-1">
+				<p style="text-align: center; padding:24px 0; background-color: #777"><code>col</code></p>
+			</div>
+			<div class="col-3">
+				<p style="text-align: center; padding:24px 0; background-color: #444"><code>col</code></p>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>offset</h3>
+		<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="col-11 col-offset-1">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-11 & col-offset-1</code></p>
+			</div>
+		</div>
+		<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="col-4 col-offset-3">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-4 & col-offset-3</code></p>
+			</div>
+		</div>
+		<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="col-4 col-offset-8">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-4 & col-offset-8</code></p>
+			</div>
+		</div>
+	</section>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>Breakpoints</h3>
+		<p>col-mobile-[number]:- 767px</p>
+		<p>col-tablet-[number]:768px - 1023px</p>
+		<p>col-desktop-[number]:1024px</p>
+		<div class="row" style="margin-top: 24px;">
+			<div class="col-desktop-4 col-tablet-12">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-desktop-4</code><br><code>col-tablet-12</code></p>
+			</div>
+			<div class="col-desktop-6 col-tablet-9">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-desktop-6</code><br><code>col-tablet-9</code></p>
+			</div>
+			<div class="col-desktop-2 col-tablet-3">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-desktop-2</code><br><code>col-tablet-3</code></p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
