@@ -22,3 +22,10 @@ pre code {
   overflow-x: auto;
   padding: 1.25rem 1.5rem;
 }
+
+code {
+  padding: 0 4px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  color: #333;
+}
