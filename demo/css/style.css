@@ -397,7 +397,7 @@ th {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin-top: -16px;
+  margin-top: -8px;
   margin-left: -8px;
   margin-right: -8px; }
   @media screen and (max-width: 768px) {
