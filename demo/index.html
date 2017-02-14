@@ -18,8 +18,8 @@
 				To build a <strong>grid</strong>, just
 			</p>
 			<ol>
-				<li>Add a <code>row</code> container</li>
-				<li>Adds as many <code>col</code> elements as you want</li>
+				<li>Add a <code>.row</code> container</li>
+				<li>Adds as many <code>.col</code> elements as you want</li>
 			</ol>
 			<p>
 				Each column will have an equal width, no matter the number of columns.
@@ -27,16 +27,16 @@
 		</div>
 		<div class="row " style="margin-top: 24px;">
 			<div class="col">
-				<p style="text-align: center; padding:24px 0; background-color: #ddd"><code>Fisrt column</code></p>
+				<p style="text-align: center; padding:24px 0; background-color: #ddd">Fisrt column</p>
 			</div>
 			<div class="col">
-				<p style="text-align: center; padding:24px 0; background-color: #ccc"><code>Second column</code></p>
+				<p style="text-align: center; padding:24px 0; background-color: #ccc">Second column</p>
 			</div>
 			<div class="col">
-				<p style="text-align: center; padding:24px 0; background-color: #666"><code>Third column</code></p>
+				<p style="text-align: center; padding:24px 0; background-color: #666">Third column</p>
 			</div>
 			<div class="col">
-				<p style="text-align: center; padding:24px 0; background-color: #999"><code>Forth column</code></p>
+				<p style="text-align: center; padding:24px 0; background-color: #999">Forth column</p>
 			</div>
 		</div>
 		<figure class="highlight">
@@ -67,7 +67,7 @@
 				By default, columns are only activated from tablet onwards. This means columns are stacked on top of each other on mobile.
 			</p>
 			<p>
-				If you want columns to work on <strong>mobile too</strong>, just add the <code>on-mobile</code> modifier on the <code>row</code> container:
+				If you want columns to work on mobile too, just add the <code>.on-mobile</code> modifier on the <code>.row</code> container:
 			</p>
 		</div>
 		<div class="row on-mobile" style="margin-top: 24px;">
@@ -121,6 +121,7 @@
 	<hr>
 	<section style="margin-top: 40px;">
 		<h3>gapless</h3>
+		<p>To make col gapless, just add a <code>.row-gapless</code> on the row.</p>
 		<div class="row row-gapless" style="margin-top: 24px;">
 			<div class="col-2">
 				<p style="text-align: center; padding:24px 0; background-color: #ddd"><code>col</code></p>
@@ -145,6 +146,7 @@
 	<hr>
 	<section style="margin-top: 40px;">
 		<h3>offset</h3>
+		<p>You can use offset modifiers like <code>.col-offset-*</code> to create horizontal space around <code>.col</code> elements.</p>
 		<div class="row on-mobile" style="margin-top: 24px;">
 			<div class="col-11 col-offset-1">
 				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-11 & col-offset-1</code></p>
@@ -164,9 +166,9 @@
 	<hr>
 	<section style="margin-top: 40px;">
 		<h3>Breakpoints</h3>
-		<p>col-mobile-[number]:- 767px</p>
-		<p>col-tablet-[number]:768px - 1023px</p>
-		<p>col-desktop-[number]:1024px</p>
+		<p><code>.col-mobile-*</code> :- 767px</p>
+		<p><code>.col-tablet-*</code> :768px - 1023px</p>
+		<p><code>.col-desktop-*</code> :1024px -</p>
 		<div class="row" style="margin-top: 24px;">
 			<div class="col-desktop-4 col-tablet-12">
 				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-desktop-4</code><br><code>col-tablet-12</code></p>
@@ -179,5 +181,24 @@
 			</div>
 		</div>
 	</section>
+	<hr>
+	<section style="margin-top: 40px;">
+		<h3>Nesting</h3>
+		<p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.col-*</code> columns within an existing <code>.col-*</code> column.</p>
+		<div class="row" style="margin-top: 24px;">
+			<div class="col-6" style="border: 1px solid #333;">
+				<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-6</code></p>
+			</div>
+			<div class="col-6 row" style="border: 1px solid #333;">
+				<div class="col col-mobile-4">
+					<p style="text-align: center; padding:24px 0; background-color: #666"><code>col-6 col-mobile-4</code></p>
+				</div>
+				<div class="col col-mobile-8">
+					<p style="text-align: center; padding:24px 0; background-color: #999"><code>col-6 col-mobile-8</code></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<hr>
 </body>
 </html>
