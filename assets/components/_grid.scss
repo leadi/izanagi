@@ -6,6 +6,9 @@ $grid-culumn-gutter: 16px;
 .row {
 	display: block;
 	flex-wrap: nowrap;
+	margin-top: ($grid-culumn-gutter/2) * -1;
+	margin-left: ($grid-culumn-gutter/2) * -1;
+	margin-right: ($grid-culumn-gutter/2) * -1;
 	@include mobile {
 		&.on-mobile {
 			display: flex;
@@ -60,9 +63,6 @@ $grid-culumn-gutter: 16px;
 			flex-wrap: wrap;
 		}
 	}
-	margin-top: $grid-culumn-gutter * -1;
-	margin-left: ($grid-culumn-gutter/2) * -1;
-	margin-right: ($grid-culumn-gutter/2) * -1;
 	[class^="col"],
 	[class*=" col"] {
 		flex-grow: 1;
