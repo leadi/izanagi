@@ -1,31 +1,139 @@
 hr {
-  background-color: #dbdbdb;
-  border: none;
   display: block;
   height: 1px;
-  margin: 1.5rem 0;
+  margin: 24px 0;
+  background-color: #dbdbdb;
+  border: none;
 }
 
 pre {
   background-color: whitesmoke;
   color: #4a4a4a;
-  font-size: 0.8em;
   white-space: pre;
   word-wrap: normal;
 }
 
 pre code {
+  display: block;
+  padding: 16px;
   background: none;
   color: inherit;
-  display: block;
-  font-size: 1em;
+  font-size: 16px;
   overflow-x: auto;
-  padding: 1.25rem 1.5rem;
 }
 
 code {
-  padding: 0 4px;
+  padding: 0 8px;
   background: #e8e8e8;
   border-radius: 2px;
   color: #333;
 }
+
+code .tag {
+  color: #CA3C95;
+}
+
+code .attribute {
+  color: #8ED122;
+}
+
+code .class {
+  color: #3273dc;
+}
+
+.highlight {
+  margin-top: 24px;
+}
+
+h1 {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  margin: 16px 0;
+  padding-left: 8px;
+  font-size: 18px;
+  border-left: 4px solid;
+}
+
+h4 {
+  margin-top: 16px;
+}
+
+p {
+  margin-top: 1em;
+}
+p ul {
+  font-size: 20px;
+  margin: 16px 0;
+}
+ul {
+  margin: 16px 0;
+}
+
+[class^="col"] > p,
+[class*=" col"] > p {
+  margin: 0;
+  border: 1px solid #f0f0f0;
+  border-radius: .25em;
+}
+
+[class^="col"].blue > p,
+[class*=" col"].blue > p {
+  background-color: #3273dc;
+  border: none;
+  color: #fff;
+}
+[class^="col"].light-blue > p,
+[class*=" col"].light-blue > p {
+  background-color: #02a6f2;
+  border: none;
+  color: #fff;
+}
+[class^="col"].red > p,
+[class*=" col"].red > p {
+  background-color: #ff2652;
+  border: none;
+  color: #fff;
+}
+[class^="col"].orange > p,
+[class*=" col"].orange > p {
+  background-color: #ff470f;
+  border: none;
+  color: #fff;
+}
+[class^="col"].yellow > p,
+[class*=" col"].yellow > p {
+  background-color: #ffdd57;
+  border: none;
+}
+[class^="col"].green > p,
+[class*=" col"].green > p {
+  background-color: #23d160;
+  border: none;
+  color: #fff;
+}
+[class^="col"].purple > p,
+[class*=" col"].purple > p {
+  background-color: #af59ff;
+  border: none;
+  color: #fff;
+}
+[class^="col"].pink > p,
+[class*=" col"].pink > p {
+  background-color: #E91E63;
+  border: none;
+  color: #fff;
+}
+[class^="col"].blue-grey > p,
+[class*=" col"].blue-grey > p {
+  background-color: #607D8B;
+  border: none;
+  color: #fff;
+}
+
