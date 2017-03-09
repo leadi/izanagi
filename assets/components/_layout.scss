@@ -1,9 +1,12 @@
 .izanagi {
 	.layout-container {
+		width: 100%;
 		max-width: 960px;
 		margin: 0 auto;
 	}
 	.layout-container-fluid {
+		width: 100%;
+		width: 100vw;
 		max-width: none;
 	}
 }
