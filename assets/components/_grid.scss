@@ -2,146 +2,147 @@
 $grid-column-count: 12;
 $grid-column-offset-count: $grid-column-count - 1;
 $grid-culumn-gutter: 16px;
-
-.row {
-	display: block;
-	flex-wrap: nowrap;
-	margin-top: ($grid-culumn-gutter/2) * -1;
-	margin-left: ($grid-culumn-gutter/2) * -1;
-	margin-right: ($grid-culumn-gutter/2) * -1;
-	@include mobile {
-		&.on-mobile {
-			display: flex;
-			flex-wrap: wrap;
-			@include mobile {
-				@for $i from 1 through $grid-column-count {
-					> .col-#{$i} {
-						flex: 0 0 auto;
-						display: block;
-						width: ($i/$grid-column-count) * 100%;
-					}
-				}
-				@for $i from 1 through $grid-column-offset-count {
-					> .col-offset-#{$i} {
-						flex: 0 0 auto;
-						display: block;
-						margin-left: ($i/$grid-column-count) * 100%!important;
-					}
-				}
-			}
-		}
-	}
-	@include tablet {
-		&.on-tablet {
-			display: flex;
-			flex-wrap: wrap;
-			@include tablet {
-				@for $i from 1 through $grid-column-count {
-					> .col-#{$i} {
-						flex: 0 0 auto;
-						display: block;
-						width: ($i/$grid-column-count) * 100%;
-					}
-				}
-				@for $i from 1 through $grid-column-offset-count {
-					> .col-offset-#{$i} {
-						flex: 0 0 auto;
-						display: block;
-						margin-left: ($i/$grid-column-count) * 100%!important;
-					}
-				}
-			}
-		}
-		&:not(.is-desktop) {
-			display: flex;
-			flex-wrap: wrap;
-		}
-	}
-	@include desktop {
-		&.on-desktop {
-			display: flex;
-			flex-wrap: wrap;
-		}
-	}
-	[class^="col"],
-	[class*=" col"] {
-		flex-grow: 1;
-		flex-shrink: 1;
-		flex-basis: 0%;
+.izanagi{
+	.row {
 		display: block;
-		padding: ($grid-culumn-gutter/2);
-		.row,
-		&.row {
-			display: flex;
-			margin: 0;
-			padding: 0;
+		flex-wrap: nowrap;
+		margin-top: ($grid-culumn-gutter/2) * -1;
+		margin-left: ($grid-culumn-gutter/2) * -1;
+		margin-right: ($grid-culumn-gutter/2) * -1;
+		@include mobile {
+			&.on-mobile {
+				display: flex;
+				flex-wrap: wrap;
+				@include mobile {
+					@for $i from 1 through $grid-column-count {
+						> .col-#{$i} {
+							flex: 0 0 auto;
+							display: block;
+							width: ($i/$grid-column-count) * 100%;
+						}
+					}
+					@for $i from 1 through $grid-column-offset-count {
+						> .col-offset-#{$i} {
+							flex: 0 0 auto;
+							display: block;
+							margin-left: ($i/$grid-column-count) * 100%!important;
+						}
+					}
+				}
+			}
 		}
-	}
-	&.row-gapless {
-		margin-top: 0;
-		margin-left: 0;
-		margin-right: 0;
+		@include tablet {
+			&.on-tablet {
+				display: flex;
+				flex-wrap: wrap;
+				@include tablet {
+					@for $i from 1 through $grid-column-count {
+						> .col-#{$i} {
+							flex: 0 0 auto;
+							display: block;
+							width: ($i/$grid-column-count) * 100%;
+						}
+					}
+					@for $i from 1 through $grid-column-offset-count {
+						> .col-offset-#{$i} {
+							flex: 0 0 auto;
+							display: block;
+							margin-left: ($i/$grid-column-count) * 100%!important;
+						}
+					}
+				}
+			}
+			&:not(.is-desktop) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
+		@include desktop {
+			&.on-desktop {
+				display: flex;
+				flex-wrap: wrap;
+			}
+		}
 		[class^="col"],
 		[class*=" col"] {
-			padding: 0;
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: 0%;
+			display: block;
+			padding: ($grid-culumn-gutter/2);
+			.row,
+			&.row {
+				display: flex;
+				margin: 0;
+				padding: 0;
+			}
 		}
-	}
-	&.row-direction-column {
-		flex-direction: column;
-	}
+		&.row-gapless {
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 0;
+			[class^="col"],
+			[class*=" col"] {
+				padding: 0;
+			}
+		}
+		&.row-direction-column {
+			flex-direction: column;
+		}
 
-	// applies: until tablet
-	@include mobile {
-		@for $i from 1 through $grid-column-count {
-			> .col-mobile-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				width: ($i/$grid-column-count) * 100%;
+		// applies: until tablet
+		@include mobile {
+			@for $i from 1 through $grid-column-count {
+				> .col-mobile-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					width: ($i/$grid-column-count) * 100%;
+				}
+			}
+			@for $i from 1 through $grid-column-offset-count {
+				> .col-mobile-offset-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					margin-left: ($i/$grid-column-count) * 100%!important;
+				}
 			}
 		}
-		@for $i from 1 through $grid-column-offset-count {
-			> .col-mobile-offset-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				margin-left: ($i/$grid-column-count) * 100%!important;
-			}
-		}
-	}
 
-	// applies: from tablet
-	@include tablet {
-		@for $i from 1 through $grid-column-count {
-			> .col-#{$i},
-			> .col-tablet-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				width: ($i/$grid-column-count) * 100%;
+		// applies: from tablet
+		@include tablet {
+			@for $i from 1 through $grid-column-count {
+				> .col-#{$i},
+				> .col-tablet-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					width: ($i/$grid-column-count) * 100%;
+				}
+			}
+			@for $i from 1 through $grid-column-offset-count {
+				> .col-offset-#{$i},
+				> .col-tablet-offset-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					margin-left: ($i/$grid-column-count) * 100%!important;
+				}
 			}
 		}
-		@for $i from 1 through $grid-column-offset-count {
-			> .col-offset-#{$i},
-			> .col-tablet-offset-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				margin-left: ($i/$grid-column-count) * 100%!important;
-			}
-		}
-	}
 
-	// applies: from desktop
-	@include desktop {
-		@for $i from 1 through $grid-column-count {
-			> .col-desktop-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				width: ($i/$grid-column-count) * 100%;
+		// applies: from desktop
+		@include desktop {
+			@for $i from 1 through $grid-column-count {
+				> .col-desktop-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					width: ($i/$grid-column-count) * 100%;
+				}
 			}
-		}
-		@for $i from 1 through $grid-column-offset-count {
-			> .col-desktop-offset-#{$i} {
-				flex: 0 0 auto;
-				display: block;
-				margin-left: ($i/$grid-column-count) * 100%!important;
+			@for $i from 1 through $grid-column-offset-count {
+				> .col-desktop-offset-#{$i} {
+					flex: 0 0 auto;
+					display: block;
+					margin-left: ($i/$grid-column-count) * 100%!important;
+				}
 			}
 		}
 	}

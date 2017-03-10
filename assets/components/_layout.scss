@@ -1,13 +1,9 @@
 .izanagi {
-	.layout {
-		> .layout-header {
-
-		}
-		> .layout-content {
-
-		}
-		> .layout-footer {
-
-		}
+	.layout-container {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.layout-container-fluid {
+		max-width: none;
 	}
 }
