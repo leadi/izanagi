@@ -4,17 +4,69 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css?2017-03-27">
 	<link rel="stylesheet" type="text/css" href="css/style-docs.css">
 	<script src="https://use.fontawesome.com/4c93d4738d.js"></script>
 </head>
-<body class="layout-container" style="min-height: 100vh; padding: 0 16px;">
-	<h1>Documentation</h1>
-	<ul>
-		<li>・<a href="#grid" class="btn btn-link">Grid</a></li>
-		<li>・<a href="#button" class="btn btn-link">Button</a></li>
-	</ul>
+<body style="min-height: 100vh;">
+	<div class="container">
+		<h1>Documentation</h1>
+		<ul>
+			<li>・<a href="#layout" class="btn btn-link">Layout</a></li>
+			<li>・<a href="#grid" class="btn btn-link">Grid</a></li>
+			<li>・<a href="#button" class="btn btn-link">Button</a></li>
+		</ul>
+	</div>
+	<section id="layout" style="margin-top: 60px;">
+		<div class="container">
+			<h2>Layout</h2>
+			<hr>
+		</div>
+		<section style="margin-top: 40px;">
+			<div class="container">
+				<h3>Container</h3>
+				<div>
+					<p><code>.container</code>を記述された要素は</p>
+					<ul>
+						<li>・最大幅が<strong>960px</strong>になり、中央に配置されます。</li>
+						<li>・左右に<strong>16px</strong>のpaddingをとります。</li>
+					</ul>
+				</div>
+				<div>
+					<div class="container demo-container demo-example">
+						<code>.container</code>
+					</div>
+				</div>
+				<div class="highlight">
+<pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"container"</span>&gt;container&lt;/<span class="tag">div</span>&gt;
+</code></pre></div>
+				<p class="container demo-caution"><i class="fa fa-exclamation-circle" aria-hidden="true"></i><code>&lt;body&gt;</code>など大きな枠組みに使うよりも<code>&lt;section&gt;</code>や<code>&lt;div&gt;</code>など必要な箇所に応じて小さく使うことを推奨します。</p>
+			</div>
+		</section>
+		<section style="margin-top: 40px;">
+			<div class="container">
+			<h3>Fluid Container</h3>
+			<div>
+				<p><code>.container-fluid</code>を記述された要素は</p>
+				<ul>
+					<li>・最大幅はなく</li>
+					<li>・左右に<strong>16px</strong>のpaddingをとります。</li>
+				</ul>
+			</div>
+			</div>
+			<div class="container-fluid demo-container-fluid demo-example">
+				<code>.container-fluid</code>
+			</div>
+			<div class="container">
+				<div class="highlight">
+<pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"container-fluid"</span>&gt;container-fluid&lt;/<span class="tag">div</span>&gt;
+</code></pre></div>
+		</section>
+		</div>
+	</section>
+	<hr>
 	<section id="grid" style="margin-top: 60px;">
+		<div class="container">
 		<h2>Grid system</h2>
 		<hr>
 		<section style="margin-top: 40px;">
@@ -24,24 +76,26 @@
 					グリッドを使用するには、囲むタグに <code>.row</code> を記述し、中の要素に <code>.col</code> を記述してください。
 				</p>
 				<p>
-					それぞれの列の幅は自動的に同じになります。
+					それぞれの列の幅は<strong>自動的に同じ</strong>になります。
 				</p>
 				<p>
 					列の最大数は<strong>12</strong>です。
 				</p>
 			</div>
-			<div class="row " style="margin-top: 24px;">
-				<div class="col light-blue">
-					<p style="text-align: center; padding:24px 0;">Fisrt column</p>
-				</div>
-				<div class="col green">
-					<p style="text-align: center; padding:24px 0;">Second column</p>
-				</div>
-				<div class="col blue">
-					<p style="text-align: center; padding:24px 0;">Third column</p>
-				</div>
-				<div class="col yellow">
-					<p style="text-align: center; padding:24px 0;">Forth column</p>
+			<div class="demo-example">
+				<div class="row">
+					<div class="col light-blue">
+						<p style="text-align: center; padding:24px 0;">Fisrt column</p>
+					</div>
+					<div class="col green">
+						<p style="text-align: center; padding:24px 0;">Second column</p>
+					</div>
+					<div class="col blue">
+						<p style="text-align: center; padding:24px 0;">Third column</p>
+					</div>
+					<div class="col yellow">
+						<p style="text-align: center; padding:24px 0;">Forth column</p>
+					</div>
 				</div>
 			</div>
 			<div class="highlight">
@@ -61,13 +115,14 @@
 					列表示はデフォルトではタブレット以上の画面幅サイズの時にのみされます。
 				</p>
 				<p>
-					つまり、モバイルでは列表示はされず縦に積み上がります。
+					つまり、<strong>モバイルでは列表示はされず縦に積み上がります。</strong>
 				</p>
 				<p>
 					もしモバイルでも列表示をさせたい場合は <code>.row</code> を持つ要素に <code>.on-mobile</code> を追記してください。
 				</p>
 			</div>
-			<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="demo-example">
+			<div class="row on-mobile">
 				<div class="col light-blue">
 					<p style="text-align: center; padding:24px 0;">1</p>
 				</div>
@@ -87,6 +142,7 @@
 					<p style="text-align: center; padding:24px 0;">6</p>
 				</div>
 			</div>
+			</div>
 			<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row on-mobile"</span>&gt;</span>
 	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>1&lt;/<span class="tag">div</span>&gt;</span>
@@ -99,39 +155,78 @@
 			</div>
 		</section>
 		<hr>
+
+		<section style="margin-top: 40px;">
+			<h3>Columns with diffrent sizes</h3>
+			<div>
+				<p>
+					列要素に<code>.col-[number]</code> を記述することで、<strong>列の幅を比率（*/12）で指定できます</strong>。
+				</p>
+				<p>
+					列の最大数は<strong>12</strong>です。
+				</p>
+			</div>
+			<div class="demo-example">
+			<div class="row">
+				<div class="col-5 light-blue">
+					<p style="text-align: center; padding:24px 0;"><code>col-5</code></p>
+				</div>
+				<div class="col-1 red">
+					<p style="text-align: center; padding:24px 0;"><code>col-1</code></p>
+				</div>
+				<div class="col-2 green">
+					<p style="text-align: center; padding:24px 0;"><code>col-2</code></p>
+				</div>
+				<div class="col-1 yellow">
+					<p style="text-align: center; padding:24px 0;"><code>col-1</code></p>
+				</div>
+				<div class="col-3 orange">
+					<p style="text-align: center; padding:24px 0;"><code>col-3</code></p>
+				</div>
+			</div>
+			</div>
+			<div class="highlight">
+<pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row"</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-5"</span>&gt;</span>col-5&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-1"</span>&gt;</span>col-1&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-2"</span>&gt;</span>col-2&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-1"</span>&gt;</span>col-1&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-3"</span>&gt;</span>col-3&lt;/<span class="tag">div</span>&gt;</span>
+&lt;/<span class="tag">div</span>&gt;</span></code></pre>
+			</div>
+		</section>
+		<hr>
 		<section style="margin-top: 40px;">
 			<h3>gapless</h3>
 			<p>
 				マージンなしの列を作成したい場合、<code>.row-gapless</code> を <code>.row</code> を持つ要素に記載してください。
 			</p>
-			<div class="row row-gapless" style="margin-top: 24px;">
-				<div class="col-2 light-blue">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
-				</div>
-				<div class="col-3 blue">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
+			<div class="demo-example">
+			<div class="row row-gapless">
+				<div class="col-5 light-blue">
+					<p style="text-align: center; padding:24px 0;"><code>col-5</code></p>
 				</div>
 				<div class="col-1 red">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
+					<p style="text-align: center; padding:24px 0;"><code>col-1</code></p>
 				</div>
 				<div class="col-2 green">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
+					<p style="text-align: center; padding:24px 0;"><code>col-2</code></p>
 				</div>
 				<div class="col-1 yellow">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
+					<p style="text-align: center; padding:24px 0;"><code>col-1</code></p>
 				</div>
 				<div class="col-3 orange">
-					<p style="text-align: center; padding:24px 0;"><code>col</code></p>
+					<p style="text-align: center; padding:24px 0;"><code>col-3</code></p>
 				</div>
+			</div>
 			</div>
 			<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row row-gapless"</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>1&lt;/<span class="tag">div</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>2&lt;/<span class="tag">div</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>3&lt;/<span class="tag">div</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>4&lt;/<span class="tag">div</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>5&lt;/<span class="tag">div</span>&gt;</span>
-	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col"</span>&gt;</span>6&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-5"</span>&gt;</span>col-5&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-1"</span>&gt;</span>col-1&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-2"</span>&gt;</span>col-2&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-1"</span>&gt;</span>col-1&lt;/<span class="tag">div</span>&gt;</span>
+	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-3"</span>&gt;</span>col-3&lt;/<span class="tag">div</span>&gt;</span>
 &lt;/<span class="tag">div</span>&gt;</span></code></pre>
 			</div>
 		</section>
@@ -141,12 +236,15 @@
 			<p>
 				オフセット（左側に余白）を持たせたい <code>.col</code> 要素に<code>.col-offset-*</code> を追記してください。
 			</p>
-			<div class="row on-mobile" style="margin-top: 24px;">
+			<div class="demo-example">
+			<div class="row on-mobile">
 				<div class="col-11 col-offset-1 light-blue">
 					<p style="text-align: center; padding:24px 0;"><code>col-11 & col-offset-1</code></p>
 				</div>
 			</div>
-			<div class="row on-mobile" style="margin-top: 24px;">
+			</div>
+			<div class="demo-example">
+			<div class="row on-mobile">
 				<div class="col-4 col-offset-3 light-blue">
 					<p style="text-align: center; padding:24px 0;"><code>col-4 & col-offset-3</code></p>
 				</div>
@@ -154,10 +252,13 @@
 					<p style="text-align: center; padding:24px 0;"><code>col-2 & col-offset-2</code></p>
 				</div>
 			</div>
-			<div class="row on-mobile" style="margin-top: 24px;">
+			</div>
+			<div class="demo-example">
+			<div class="row on-mobile">
 				<div class="col-4 col-offset-8 light-blue">
 					<p style="text-align: center; padding:24px 0;"><code>col-4 & col-offset-8</code></p>
 				</div>
+			</div>
 			</div>
 			<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row"</span>&gt;</span>
@@ -181,10 +282,14 @@
 			<p>
 				各クラス名と対応するブレイクポイントは以下の通りです：
 			</p>
-			<p><code>.col-mobile-*</code> ： 〜 767px</p>
+			<p><code>.col-mobile-*</code>  ： 〜 767px</p>
 			<p><code>.col-tablet-*</code> ： 768px 〜 1023px</p>
 			<p><code>.col-desktop-*</code> ： 1024px 〜</p>
-			<div class="row on-mobile" style="margin-top: 24px;">
+			<p>
+				（<code>.col-mobile-*</code>を利用するには<code>.row</code>を持つ要素に併せて<code>.on-mobile</code>を記述してください。）
+			</p>
+			<div class="demo-example">
+			<div class="row on-mobile">
 				<div class="col-desktop-4 col-tablet-12 col-mobile-6 light-blue">
 					<p style="text-align: center; padding:24px 0;">
 						<code>col-desktop-4</code><br>
@@ -205,6 +310,7 @@
 					</p>
 				</div>
 			</div>
+			</div>
 			<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row on-mobile"</span>&gt;</span>
 	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-desktop-4 col-tablet-12 col-mobile-6"</span>&gt;</span>col&lt;/<span class="tag">div</span>&gt;</span>
@@ -219,7 +325,8 @@
 			<p>
 				グリッド内で列をネストするには、新たな<code>.row</code> と <code>.col</code> のセットをネストの親になる <code>.col</code> に追記してください。
 			</p>
-			<div class="row" style="margin-top: 24px; margin-left: 0; margin-right: 0;">
+		<div class="demo-example">
+			<div class="row" style="margin-left: 0; margin-right: 0;">
 				<div class="col-6 light-blue" style="border: 1px solid #333;">
 					<p style="text-align: center; padding:24px 0;"><code>col-6</code></p>
 				</div>
@@ -232,6 +339,7 @@
 					</div>
 				</div>
 			</div>
+			</div>
 			<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"row on-mobile"</span>&gt;</span>
 	&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"col-6"</span>&gt;</span>col&lt;/<span class="tag">div</span>&gt;</span>
@@ -241,42 +349,45 @@
 	&lt;/<span class="tag">div</span>&gt;</span>
 &lt;/<span class="tag">div</span>&gt;</span></code></pre>
 			</div>
-
 		</section>
+		</div>
 	</section>
 	<hr>
 	<section id="button" style="margin-top: 80px;">
-		<h2>Button</h2>
-		<hr>
-		<section style="margin-top: 40px;">
-			<h3>Basic</h3>
-			<p>
-				ボタンは
-				<ul>
-					<li>・<code>&lt;a&gt;</code></li>
-					<li>・<code>&lt;button&gt;</code></li>
-					<li>・<code>&lt;input type="button | submit | reset"&gt;</code></li>
-				</ul>
-				のクラスに<code>.btn</code>を記述することで作成できます。
-			</p>
-			<p>
-				色の変更は <code>.btn-&lt;color&gt;</code> または <code>.btn-&lt;role&gt;</code>を追記してください。
-			</p>
-			<div style="margin-top: 16px; padding: 16px 8px;">
-				<button class="btn">Button</button>
-				<button class="btn btn-white">White</button>
-				<button class="btn btn-light">Light</button>
-				<button class="btn btn-dark">Dark</button>
-				<button class="btn btn-black">Black</button>
-				<a class="btn btn-link">Link</a>
-			</div>
-			<div style="padding: 16px 8px;">
-				<button class="btn btn-primary">Primary</button>
-				<button class="btn btn-info">Info</button>
-				<button class="btn btn-success">Success</button>
-				<button class="btn btn-warning">Warning</button>
-				<button class="btn btn-danger">Danger</button>
-			</div>
+		<div class="container">
+			<h2>Button</h2>
+			<hr>
+			<section style="margin-top: 40px;">
+				<h3>Basic</h3>
+				<p>
+					ボタンは
+					<ul>
+						<li>・<code>&lt;a&gt;</code></li>
+						<li>・<code>&lt;button&gt;</code></li>
+						<li>・<code>&lt;input type="button | submit | reset"&gt;</code></li>
+					</ul>
+					のクラスに<code>.btn</code>を記述することで作成できます。
+				</p>
+				<p>
+					色の変更は <code>.btn-&lt;color&gt;</code> または <code>.btn-&lt;role&gt;</code>を追記してください。
+				</p>
+				<div class="demo-example">
+					<div style="padding: 16px 8px;">
+						<button class="btn">Button</button>
+						<button class="btn btn-white">White</button>
+						<button class="btn btn-light">Light</button>
+						<button class="btn btn-dark">Dark</button>
+						<button class="btn btn-black">Black</button>
+						<a class="btn btn-link">Link</a>
+					</div>
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-primary">Primary</button>
+						<button class="btn btn-info">Info</button>
+						<button class="btn btn-success">Success</button>
+						<button class="btn btn-warning">Warning</button>
+						<button class="btn btn-danger">Danger</button>
+					</div>
+				</div>
 <div class="highlight">
 <pre><code>&lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn"</span>&gt;</span>Button&lt;/<span class="tag">button</span>&gt;</span>
 &lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-white"</span>&gt;</span>Button&lt;/<span class="tag">button</span>&gt;</span>
@@ -295,7 +406,7 @@
 		<section style="margin-top: 40px;">
 			<h3>Colors</h3>
 			<p>izanagiに用意されているボタン色は下記の9種類（+ default、white、light、dark、black）です。</p>
-			<div style="padding: 16px 8px;">
+			<div class="demo-example" style="padding: 16px 8px;">
 				<button class="btn btn-blue">Blue</button>
 				<button class="btn btn-light-blue">Light-blue</button>
 				<button class="btn btn-blue-grey">blue-grey</button>
@@ -313,7 +424,7 @@
 			<p>
 				サイズは <code>.btn-&lt;size&gt;</code> を追記して変更できます。
 			</p>
-			<div style="margin-top: 16px; padding: 16px 8px;">
+			<div class="demo-example" style="padding: 16px 8px;">
 				<button class="btn btn-small">Small</button>
 				<button class="btn">Normal</button>
 				<button class="btn btn-medium">Medium</button>
@@ -330,19 +441,21 @@
 			<h3>Styles</h3>
 			<section>
 				<h4>outlined</h4>
-				<div style="margin-top: 16px; padding: 16px 8px; background: #fff;">
-					<button class="btn btn-outlined">Outlined</button>
-					<button class="btn btn-primary btn-outlined">Outlined</button>
-					<button class="btn btn-info btn-outlined">Outlined</button>
-					<button class="btn btn-success btn-outlined">Outlined</button>
-					<button class="btn btn-danger btn-outlined">Outlined</button>
-				</div>
-				<div style="padding: 16px 8px; background: #333;">
-					<button class="btn btn-white btn-outlined">Outlined</button>
-					<button class="btn btn-primary btn-outlined">Outlined</button>
-					<button class="btn btn-info btn-outlined">Outlined</button>
-					<button class="btn btn-success btn-outlined">Outlined</button>
-					<button class="btn btn-danger btn-outlined">Outlined</button>
+				<div class="demo-example">
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-outlined">Outlined</button>
+						<button class="btn btn-primary btn-outlined">Outlined</button>
+						<button class="btn btn-info btn-outlined">Outlined</button>
+						<button class="btn btn-success btn-outlined">Outlined</button>
+						<button class="btn btn-danger btn-outlined">Outlined</button>
+					</div>
+					<div style="padding: 16px 8px; background: #333;">
+						<button class="btn btn-white btn-outlined">Outlined</button>
+						<button class="btn btn-primary btn-outlined">Outlined</button>
+						<button class="btn btn-info btn-outlined">Outlined</button>
+						<button class="btn btn-success btn-outlined">Outlined</button>
+						<button class="btn btn-danger btn-outlined">Outlined</button>
+					</div>
 				</div>
 				<div class="highlight">
 <pre><code>&lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-outlined"</span>&gt;</span>Outlined&lt;/<span class="tag">button</span>&gt;</span>
@@ -356,19 +469,21 @@
 			<hr>
 			<section style="margin-top: 40px;">
 				<h4>inverted</h4>
-				<div style="margin-top: 16px; padding: 16px 8px;">
-					<button class="btn btn-inverted">Inverted</button>
-					<button class="btn btn-primary btn-inverted">Inverted</button>
-					<button class="btn btn-info btn-inverted">Inverted</button>
-					<button class="btn btn-success btn-inverted">Inverted</button>
-					<button class="btn btn-danger btn-inverted">Inverted</button>
-				</div>
-				<div style="padding: 16px 8px;background: #333;">
-					<button class="btn btn-inverted">Inverted</button>
-					<button class="btn btn-primary btn-inverted">Inverted</button>
-					<button class="btn btn-info btn-inverted">Inverted</button>
-					<button class="btn btn-success btn-inverted">Inverted</button>
-					<button class="btn btn-danger btn-inverted">Inverted</button>
+				<div class="demo-example">
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-inverted">Inverted</button>
+						<button class="btn btn-primary btn-inverted">Inverted</button>
+						<button class="btn btn-info btn-inverted">Inverted</button>
+						<button class="btn btn-success btn-inverted">Inverted</button>
+						<button class="btn btn-danger btn-inverted">Inverted</button>
+					</div>
+					<div style="padding: 16px 8px;background: #333;">
+						<button class="btn btn-inverted">Inverted</button>
+						<button class="btn btn-primary btn-inverted">Inverted</button>
+						<button class="btn btn-info btn-inverted">Inverted</button>
+						<button class="btn btn-success btn-inverted">Inverted</button>
+						<button class="btn btn-danger btn-inverted">Inverted</button>
+					</div>
 				</div>
 				<div class="highlight">
 <pre><code>&lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-inverted"</span>&gt;</span>Inverted&lt;/<span class="tag">button</span>&gt;</span>
@@ -389,48 +504,50 @@
 					Font Awesomeの導入方法はこちらを御覧ください：
 					<a href="http://fontawesome.io/get-started/" class="btn btn-link" target="_blank">Get Started with Font Awesome</a>
 				</p>
-				<div style="margin-top: 16px; padding: 16px 8px;">
-					<button class="btn btn-small">
-						<span class="icon">
-							<i class="fa fa-bold"></i>
-						</span>
-					</button>
-					<button class="btn btn-small">
-						<span class="icon">
-							<i class="fa fa-italic"></i>
-						</span>
-					</button>
-					<button class="btn btn-small">
-						<span class="icon">
-							<i class="fa fa-underline"></i>
-						</span>
-					</button>
-				</div>
-				<div style="padding: 16px 8px;">
-					<button class="btn">
-						<span class="icon">
-							<i class="fa fa-github"></i>
-						</span>
-						<span>GitHub</span>
-					</button>
-					<button class="btn btn-primary">
-						<span class="icon">
-							<i class="fa fa-twitter"></i>
-						</span>
-						<span>Twitter</span>
-					</button>
-					<button class="btn btn-success">
-						<span class="icon">
-							<i class="fa fa-check"></i>
-						</span>
-						<span>Save</span>
-					</button>
-					<button class="btn btn-danger btn-outlined">
-						<span>Delete</span>
-						<span class="icon">
-							<i class="fa fa-times"></i>
-						</span>
-					</button>
+				<div class="demo-example">
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-small">
+							<span class="icon">
+								<i class="fa fa-bold"></i>
+							</span>
+						</button>
+						<button class="btn btn-small">
+							<span class="icon">
+								<i class="fa fa-italic"></i>
+							</span>
+						</button>
+						<button class="btn btn-small">
+							<span class="icon">
+								<i class="fa fa-underline"></i>
+							</span>
+						</button>
+					</div>
+					<div style="padding: 16px 8px;">
+						<button class="btn">
+							<span class="icon">
+								<i class="fa fa-github"></i>
+							</span>
+							<span>GitHub</span>
+						</button>
+						<button class="btn btn-primary">
+							<span class="icon">
+								<i class="fa fa-twitter"></i>
+							</span>
+							<span>Twitter</span>
+						</button>
+						<button class="btn btn-success">
+							<span class="icon">
+								<i class="fa fa-check"></i>
+							</span>
+							<span>Save</span>
+						</button>
+						<button class="btn btn-danger btn-outlined">
+							<span>Delete</span>
+							<span class="icon">
+								<i class="fa fa-times"></i>
+							</span>
+						</button>
+					</div>
 				</div>
 				<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span>&gt;</span>
@@ -485,21 +602,23 @@
 			<h3>State</h3>
 			<section>
 				<h4>Loading</h4>
-				<div style="margin-top: 16px; padding: 16px 8px;">
-					<button class="btn btn-loading">Loading</button>
-					<button class="btn btn-primary btn-loading">Loading</button>
-					<button class="btn btn-info btn-loading">Loading</button>
-					<button class="btn btn-success btn-loading">Loading</button>
-					<button class="btn btn-warning btn-loading">Loading</button>
-					<button class="btn btn-danger btn-loading">Loading</button>
-				</div>
-				<div style="padding: 16px 8px;">
-					<button class="btn btn-outlined btn-loading">Loading</button>
-					<button class="btn btn-outlined btn-primary btn-loading">Loading</button>
-					<button class="btn btn-outlined btn-info btn-loading">Loading</button>
-					<button class="btn btn-outlined btn-success btn-loading">Loading</button>
-					<button class="btn btn-outlined btn-warning btn-loading">Loading</button>
-					<button class="btn btn-outlined btn-danger btn-loading">Loading</button>
+				<div class="demo-example">
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-loading">Loading</button>
+						<button class="btn btn-primary btn-loading">Loading</button>
+						<button class="btn btn-info btn-loading">Loading</button>
+						<button class="btn btn-success btn-loading">Loading</button>
+						<button class="btn btn-warning btn-loading">Loading</button>
+						<button class="btn btn-danger btn-loading">Loading</button>
+					</div>
+					<div style="padding: 16px 8px;">
+						<button class="btn btn-outlined btn-loading">Loading</button>
+						<button class="btn btn-outlined btn-primary btn-loading">Loading</button>
+						<button class="btn btn-outlined btn-info btn-loading">Loading</button>
+						<button class="btn btn-outlined btn-success btn-loading">Loading</button>
+						<button class="btn btn-outlined btn-warning btn-loading">Loading</button>
+						<button class="btn btn-outlined btn-danger btn-loading">Loading</button>
+					</div>
 				</div>
 				<div class="highlight">
 <pre><code>&lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-loading"</span>&gt;</span>Loading&lt;/<span class="tag">button</span>&gt;</span>
@@ -513,21 +632,23 @@
 			<hr>
 			<section>
 				<h4>Disabled</h4>
-				<div style="margin-top: 16px; padding: 16px 8px; background: #fff;">
-					<button class="btn btn-disabled">Disabled</button>
-					<button class="btn btn-primary btn-disabled">Disabled</button>
-					<button class="btn btn-info btn-disabled">Disabled</button>
-					<button class="btn btn-success btn-outlined btn-disabled">Disabled</button>
-					<button class="btn btn-warning btn-outlined btn-disabled">Disabled</button>
-					<button class="btn btn-danger btn-outlined btn-disabled">Disabled</button>
-				</div>
-				<div style="padding: 16px 8px; background: #333;">
-					<button class="btn btn-disabled">Disabled</button>
-					<button class="btn btn-primary btn-disabled">Disabled</button>
-					<button class="btn btn-info btn-disabled">Disabled</button>
-					<button class="btn btn-success btn-outlined btn-disabled">Disabled</button>
-					<button class="btn btn-warning btn-outlined btn-disabled">Disabled</button>
-					<button class="btn btn-danger btn-outlined btn-disabled">Disabled</button>
+				<div class="demo-example">
+					<div style="padding: 16px 8px; background: #fff;">
+						<button class="btn btn-disabled">Disabled</button>
+						<button class="btn btn-primary btn-disabled">Disabled</button>
+						<button class="btn btn-info btn-disabled">Disabled</button>
+						<button class="btn btn-success btn-outlined btn-disabled">Disabled</button>
+						<button class="btn btn-warning btn-outlined btn-disabled">Disabled</button>
+						<button class="btn btn-danger btn-outlined btn-disabled">Disabled</button>
+					</div>
+					<div style="padding: 16px 8px; background: #333;">
+						<button class="btn btn-disabled">Disabled</button>
+						<button class="btn btn-primary btn-disabled">Disabled</button>
+						<button class="btn btn-info btn-disabled">Disabled</button>
+						<button class="btn btn-success btn-outlined btn-disabled">Disabled</button>
+						<button class="btn btn-warning btn-outlined btn-disabled">Disabled</button>
+						<button class="btn btn-danger btn-outlined btn-disabled">Disabled</button>
+					</div>
 				</div>
 				<div class="highlight">
 <pre><code>&lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-disabled"</span>&gt;</span>Disabled&lt;/<span class="tag">button</span>&gt;</span>
@@ -536,10 +657,11 @@
 &lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-success btn-disabled"</span>&gt;</span>Disabled&lt;/<span class="tag">button</span>&gt;</span>
 &lt;<span class="tag">button</span> <span class="attribute">class</span>=<span class="class">"btn btn-danger btn-disabled"</span>&gt;</span>Disabled&lt;/<span class="tag">button</span>&gt;</span>
 </code></pre>
-				</div>
+					</div>
+				</section>
+				<hr>
 			</section>
-			<hr>
-		</section>
+		</div>
 	</section>
 </body>
 </html>

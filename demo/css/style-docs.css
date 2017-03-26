@@ -7,8 +7,6 @@ hr {
 }
 
 pre {
-  background-color: whitesmoke;
-  color: #4a4a4a;
   white-space: pre;
   word-wrap: normal;
 }
@@ -43,6 +41,8 @@ code .class {
 
 .highlight {
   margin-top: 24px;
+  background-color: whitesmoke;
+  color: #4a4a4a;
 }
 
 h1 {
@@ -63,6 +63,7 @@ h3 {
 
 h4 {
   margin-top: 16px;
+  font-size: 18px;
 }
 
 p {
@@ -75,6 +76,30 @@ p ul {
 ul {
   margin: 16px 0;
 }
+
+.demo-caution {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 2px;
+}
+.demo-example {
+  margin-top: 24px;
+}
+
+.demo-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #02a6f2;
+}
+.demo-container-fluid {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #02a6f2;
+}
+
 
 [class^="col"] > p,
 [class*=" col"] > p {
