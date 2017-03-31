@@ -2206,8 +2206,11 @@ th {
       margin-left: 91.66667% !important; } }
 
 .izanagi .layout-container {
+  width: 100%;
   max-width: 960px;
   margin: 0 auto; }
 
 .izanagi .layout-container-fluid {
+  width: 100%;
+  width: 100vw;
   max-width: none; }
