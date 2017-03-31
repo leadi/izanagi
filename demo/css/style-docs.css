@@ -1,3 +1,11 @@
+header {
+  background-color: ;
+  height: 56px;
+  line-height: 56px;
+  background-color: #263238;
+  color: #fff;
+  font-weight: bold;
+}
 hr {
   display: block;
   height: 1px;
@@ -39,12 +47,6 @@ code .class {
   color: #3273dc;
 }
 
-.highlight {
-  margin-top: 24px;
-  background-color: whitesmoke;
-  color: #4a4a4a;
-}
-
 h1 {
   margin-top: 24px;
   font-size: 20px;
@@ -76,7 +78,17 @@ p ul {
 ul {
   margin: 16px 0;
 }
-
+ul > li {
+  padding: 4px 0;
+}
+.highlight {
+  margin-top: 24px;
+  background-color: whitesmoke;
+  color: #4a4a4a;
+}
+.demo-section {
+  margin-top: 40px;
+}
 .demo-caution {
   background-color: #d9edf7;
   border-color: #bce8f1;
@@ -84,20 +96,36 @@ ul {
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 2px;
+  border-left: 4px solid;
+}
+.demo-caution:before {
+  position: absolute;
+  content: "!";
+  top: 20px;
+  left: -11px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #31708f;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
 }
 .demo-example {
-  margin-top: 24px;
+  margin-top: 48px;
 }
 
 .demo-container {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #02a6f2;
+  background-color: #ffdd57;
 }
 .demo-container-fluid {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #02a6f2;
+  background-color: #ffdd57;
 }
 
 
