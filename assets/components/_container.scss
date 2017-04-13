@@ -1,0 +1,21 @@
+.izanagi {
+	.container {
+		position: relative;
+		max-width: 960px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 16px;
+		padding-left: 16px;
+		.container-fluid {
+			margin-right: -16px;
+			margin-left: -16px;
+		}
+	}
+	.container-fluid {
+		position: relative;
+		width: 100%;
+		max-width: none;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+}
