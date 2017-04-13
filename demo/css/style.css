@@ -444,6 +444,7 @@ th {
   white-space: nowrap;
   -moz-appearance: none;
   -webkit-appearance: none;
+  text-decoration: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -469,7 +470,8 @@ th {
     text-decoration: underline; }
     .izanagi .btn.btn-link:hover, .izanagi .btn.btn-link.btn-hovered, .izanagi .btn.btn-link:focus, .izanagi .btn.btn-link.btn-focused, .izanagi .btn.btn-link:active, .izanagi .btn.btn-link.btn-active {
       background-color: rgba(0, 0, 0, 0.04);
-      color: #363636; }
+      color: #363636;
+      text-decoration: underline; }
   .izanagi .btn .icon:first-child:not(:last-child) {
     margin-right: .5rem; }
   .izanagi .btn .icon:last-child:not(:first-child) {
@@ -1305,7 +1307,6 @@ th {
 .izanagi .container-fluid {
   position: relative;
   width: 100%;
-  width: 100vw;
   max-width: none;
   padding-right: 16px;
   padding-left: 16px; }
