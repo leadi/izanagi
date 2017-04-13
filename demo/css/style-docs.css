@@ -48,7 +48,6 @@ code .class {
 }
 
 h1 {
-  margin-top: 24px;
   font-size: 20px;
 }
 
@@ -85,6 +84,11 @@ ul > li {
   margin-top: 24px;
   background-color: whitesmoke;
   color: #4a4a4a;
+}
+.demo-indexlist {
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 2px;
 }
 .demo-section {
   margin-top: 40px;
