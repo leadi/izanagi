@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .izanagi .text-center {
   text-align: center; }
 
@@ -396,6 +397,9 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* $tablet以下の画面サイズ */
+/* $tablet以上の画面サイズ */
+/* $desktop以下の画面サイズ */
 @-webkit-keyframes spinAround {
   0% {
     -webkit-transform: rotate(0deg);
@@ -403,7 +407,6 @@ th {
   100% {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg); } }
-
 @keyframes spinAround {
   0% {
     -webkit-transform: rotate(0deg);
