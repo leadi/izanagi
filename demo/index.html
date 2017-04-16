@@ -21,6 +21,7 @@
 						<li>・<a href="#layout" class="btn btn-link">Layout</a></li>
 						<li>・<a href="#grid" class="btn btn-link">Grid</a></li>
 						<li>・<a href="#button" class="btn btn-link">Button</a></li>
+						<li>・<a href="#form" class="btn btn-link">Form</a></li>
 					</ul>
 				</div>
 			</aside>
@@ -86,7 +87,7 @@
 							<h3>Columns</h3>
 							<div>
 								<p>
-									グリッドを使用するには、囲むタグに <code>.row</code> を記述し、中の要素に <code>.col</code> を記述してください。
+									グリッドを使用するには、親要素に <code>.row</code> を記述し、子要素に <code>.col</code> を記述してください。
 								</p>
 								<p>
 									それぞれの列の幅は<strong>自動的に同じ</strong>になります。
@@ -671,7 +672,7 @@
 						</section>
 					</div>
 					<hr>
-					<section id="layout" style="margin-top: 60px;">
+					<section id="form" style="margin-top: 60px;">
 						<div class="container">
 							<h2>Form</h2>
 							<hr>
@@ -690,6 +691,7 @@
 										<li>・<code>.btn</code></li>
 										<li>・<code>.label</code></li>
 									</ul>
+									<p>それぞれの要素は<code>.field</code>で囲んでください</p>
 								</div>
 								<hr>
 							</div>
@@ -697,25 +699,56 @@
 						<section class="demo-section">
 							<div class="container">
 								<h3>input</h3>
-								<div>
-									<p><code>.input</code>を記述された要素は</p>
-									<ul>
-										<li>・最大幅が<strong>960px</strong>になり、中央に配置されます。</li>
-										<li>・左右に<strong>16px</strong>のpaddingをとります。</li>
-									</ul>
-									<p class="container demo-caution">
-										<code>&lt;body&gt;</code>など大きな枠組みに使うよりも<code>&lt;section&gt;</code>や<code>&lt;div&gt;</code>など必要な箇所に応じて小さく使うことを推奨します。
-									</p>
-								</div>
-								<div>
-									<div class="container demo-container demo-example">
-										<code>.container</code>
+								<p>
+									<code>&lt;input&gt;</code> 要素に<code>.input</code>を記述してください。
+								</p>
+								<section>
+									<h4>vertical</h4>
+									<div class="demo-example">
+										<div class="field">
+											<input class="input" type="text" name="">
+										</div>
+										<div class="field">
+											<label class="label" for="inputText">Name</label>
+											<input type="text" class="input" id="inputName" name="" placeholder="input text">
+										</div>
+										<div class="field">
+											<label class="label" for="inputTextWithHelp">Name with label and hint</label>
+											<input type="text" class="input" id="inputTextWithHelp" placeholder="input text">
+											<div class="hint">
+												This field is required
+											</div>
+										</div>
+									</div>
+									<div class="highlight">
+<pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"container"</span>&gt;container&lt;/<span class="tag">div</span>&gt;</code></pre>
 									</div>
 								</div>
-								<div class="highlight">
+								<section class="demo-section">
+									<div class="container">
+										<h4>horizontal</h4>
+										<p></p>
+										<div class="demo-example">
+											<div class="field">
+												<input class="input" type="text" name="">
+											</div>
+											<div class="field">
+												<label class="label" for="inputText">Name</label>
+												<input type="text" class="input" id="inputName" name="" placeholder="input text">
+											</div>
+											<div class="field">
+												<label class="label" for="inputTextWithHelp">Name with label and hint</label>
+												<input type="text" class="input" id="inputTextWithHelp" placeholder="input text">
+												<div class="hint">
+													This field is required
+												</div>
+											</div>
+										</div>
+										<div class="highlight">
 <pre><code>&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="class">"container"</span>&gt;container&lt;/<span class="tag">div</span>&gt;</code></pre>
-								</div>
-							</div>
+										</div>
+									</div>
+								</section>
 						</section>
 						<section class="demo-section">
 							<div class="container">
