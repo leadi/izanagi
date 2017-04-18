@@ -6,9 +6,8 @@
 		margin-left: auto;
 		padding-right: 16px;
 		padding-left: 16px;
-		.container-fluid {
-			margin-right: -16px;
-			margin-left: -16px;
+		@include over($desktop) {
+			max-width: 1152px;
 		}
 	}
 	.container-fluid {

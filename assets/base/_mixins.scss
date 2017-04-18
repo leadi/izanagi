@@ -3,13 +3,13 @@
 $tablet: 768px;
 $desktop: 1024px;
 
-@mixin from($device) {
+@mixin over($device) {
 	@media screen and (min-width: $device) {
 		@content;
 	}
 }
 
-@mixin until($device) {
+@mixin under($device) {
 	@media screen and (max-width: $device - 1px) {
 		@content;
 	}
@@ -21,18 +21,21 @@ $desktop: 1024px;
 	}
 }
 
+/* $tablet以下の画面サイズ */
 @mixin mobile {
 	@media screen and (max-width: $tablet) {
 		@content;
 	}
 }
 
+/* $tablet以上の画面サイズ */
 @mixin tablet {
 	@media screen and (min-width: $tablet) {
 		@content;
 	}
 }
 
+/* $desktop以下の画面サイズ */
 @mixin desktop {
 	@media screen and (min-width: $desktop) {
 		@content;
